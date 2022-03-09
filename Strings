@@ -1,0 +1,14 @@
+//Put prompt inside variable 
+var tweet = prompt("Enter your text here: ");
+//Get length of text entered with .length
+tweet.length
+var tweetCount = tweet.length
+alert("You have written " + tweetCount + " characters. You have " + (140 - tweetCount) + " remaining"); 
+
+//Slicing 
+var tweet = prompt("Enter your text here: ");
+var tweetUnder140 = tweet.slice(0, 140);
+alert(tweetUnder140)
+
+//Can refactor to:
+alert(prompt("Enter your text here: ").slice(0,140));
