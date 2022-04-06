@@ -51,7 +51,7 @@ var numOfBottles = 99;
 function beer(){
 
     //set our variable greater than or equal to 0 
-    while (numOfBottles >= 0){
+    while (numOfBottles >= 1){
         //We want our grammar to be correct. So we will set an if statement to change from the plural word "bottles" to "bottle" when 
         //there is only one bottle on the wall.
         var bottleWord = " bottles";
@@ -63,5 +63,7 @@ function beer(){
         console.log(" Take one down, pass it around, " + numOfBottles + bottleWord + " of beer on the wall");
         numOfBottles--;
     }
+
+    console.log("No more bottles of beer on the wall, no more bottles of beer.")
 
 }
