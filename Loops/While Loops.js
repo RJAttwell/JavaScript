@@ -43,11 +43,17 @@ function fizzbuzz(){
 //Be careful you do not accidentally create an infinite loop. Will crash code.
 
 //99 Bottles Challenge:
-var numOfBottles = 99;
 
+//Create our variable starting at 99 as we are decreasing the value every loop
+var numOfBottles = 99; 
+
+//Create function
 function beer(){
 
+    //set our variable greater than or equal to 0 
     while (numOfBottles >= 0){
+        //We want our grammar to be correct. So we will set an if statement to change from the plural word "bottles" to "bottle" when 
+        //there is only one bottle on the wall.
         var bottleWord = " bottles";
         if(numOfBottles === 1){
             bottleWord = " bottle";
