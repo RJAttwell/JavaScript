@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Website</title>
+</head>
+
+<!-- This is in-line Javascript (Similar to in-line CSS)
+When website is loaded, whatever javascript is between the quotation marks will get loaded up -->
+
+<!-- Try to avoid in-line Javascript the same as you would in-line CSS -->
+<body onload="alert('Hello');"> 
+    <!-- Need to have single quotation marks for strings inside double quotation marks -->
+    <h1>HELLO</h1>
+
+
+    <!-- This is internal Javascript -->
+    <!-- When computer hits script tag it will run the code inside it -->
+    <script type="text/JavaScript">
+        alert("Hello")
+    </script>
+
+    <!-- External JavaScript
+    Good practice to put it right at the end just before the closing body tag -->
+    <script src="index.js" charset="utf-8"></script>
+
+</body>
+</html>
