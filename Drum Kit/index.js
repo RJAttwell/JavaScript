@@ -1,4 +1,12 @@
-document.querySelector("button").addEventListener("click", handleClick); 
+var numOfDrums = document.querySelectorAll(".drum").length; //Gives us the number at which the for loop should stop
+//Select only buttons with.drum in
+
+for(var i = 0; i<numOfDrums; i++){
+//Loop through all the buttons with class of "drum" on it and adds the event listener to them
+//i++ to add one onto i until it gets to the max number of buttons (in this case it's 7)
+
+document.querySelectorAll("button")[i].addEventListener("click", handleClick)
+}
 //Whenever the button is clicked, an event occurs due to .addEventListener
 //Listens for clicks on the button.
 //When a click occurs, it calls the function 'handleClick' which will activate the code inside it
@@ -7,3 +15,9 @@ document.querySelector("button").addEventListener("click", handleClick);
 function handleClick(){
     alert("click")
 }
+
+//Different method:
+//Instead of adding a function name which calls the function later on, you can write it as an anonymous function
+// document.querySelector("button").addEventListener("click", function(){
+//     alert("click");
+// });
