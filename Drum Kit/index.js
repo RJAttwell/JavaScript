@@ -21,3 +21,6 @@ function handleClick(){
 // document.querySelector("button").addEventListener("click", function(){
 //     alert("click");
 // });
+
+//addEventListener has 2 inputs (.addEventListener(input1, input2))
+//input 1 specifies what event shall occur and input 2 says what should happen once that event is detected
