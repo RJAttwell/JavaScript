@@ -11,6 +11,8 @@ document.querySelectorAll("button")[i].addEventListener("click", handleClick)
 //Listens for clicks on the button.
 //When a click occurs, it calls the function 'handleClick' which will activate the code inside it
 //Do not add () to handleClick inside the addEventListener command as it will perform the function as soon as you load the page
+//Functions that can use other functions as inputs are called higher order functions
+//This feature is also present in Java, Python, Ruby, etc.
 
 function handleClick(){
     alert("click")
