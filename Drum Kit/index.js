@@ -5,8 +5,13 @@ for(var i = 0; i<numOfDrums; i++){
 //Loop through all the buttons with class of "drum" on it and adds the event listener to them
 //i++ to add one onto i until it gets to the max number of buttons (in this case it's 7)
 
-document.querySelectorAll("button")[i].addEventListener("click", handleClick)
-}
+    document.querySelectorAll("button")[i].addEventListener("click", function() {
+    //console.log(this); //Will log any button that is clicked on
+        this.style.color = "white"; //Will log all HTML inside a button that has been clicked on
+        //Use 'this' to get the identify of the button that triggered the event and change use .style to change
+        //it's colour to white
+    });
+ };
 //Whenever the button is clicked, an event occurs due to .addEventListener
 //Listens for clicks on the button.
 //When a click occurs, it calls the function 'handleClick' which will activate the code inside it
@@ -15,7 +20,11 @@ document.querySelectorAll("button")[i].addEventListener("click", handleClick)
 //This feature is also present in Java, Python, Ruby, etc.
 
 function handleClick(){
-    alert("click")
+    var audio = new Audio("sounds/tom-1.mp3");
+    audio.play(); 
+    //This code creates an HTML audio element
+    //Has several different elements such as time, check whether it's paused, etc.
+    //Has methods such as play which plays back the media
 }
 
 //Different method:
