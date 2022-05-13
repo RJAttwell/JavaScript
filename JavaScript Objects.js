@@ -34,3 +34,23 @@ var bellBoy1 = {
 }
 
 //Only difference between a normal and constructor function is the keyword 'new' and the capitalisation of the function name
+
+//Methods:
+//Can add function as another parameter inside the object
+
+var bellBoy1 = {
+    name: "Tim",
+    age: 19,
+    workPermit: true,
+    languages: ["English", "French"],
+    moveSuitcase: function(){
+        alert("May I take your suitcase?")
+        pickUpSuitcase();
+        move();
+    }
+}
+
+//Call method by using
+
+bellBoy1.moveSuitcase();
+//Difference between method and property is the ()
