@@ -7,9 +7,54 @@ for(var i = 0; i<numOfDrums; i++){
 
     document.querySelectorAll("button")[i].addEventListener("click", function() {
     //console.log(this); //Will log any button that is clicked on
-        this.style.color = "white"; //Will log all HTML inside a button that has been clicked on
+        //this.style.color = "white"; //Will log all HTML inside a button that has been clicked on
         //Use 'this' to get the identify of the button that triggered the event and change use .style to change
         //it's colour to white
+
+
+        var buttonInnerHTML = this.innerHTML;
+
+        switch(buttonInnerHTML){     //Expression is the thing we're going to switch on. 
+            case "w":
+                var tom1 = new Audio("sounds/tom-1.mp3");
+                tom1.play(); 
+            break; //Tells the code to exit the switch statement and continue with the rest of the code
+
+            case "a":
+                var tom2 = new Audio("sounds/tom-2.mp3");
+                tom2.play(); 
+            break;
+
+            case "s":
+                var tom3 = new Audio("sounds/tom-3.mp3");
+                tom3.play(); 
+            break;
+
+            case "d":
+                var tom4 = new Audio("sounds/tom-4.mp3");
+                tom4.play(); 
+            break;
+
+            case "j":
+                var snare = new Audio("sounds/snare.mp3");
+                snare.play(); 
+            break;
+
+            case "k":
+                var kickBass = new Audio("sounds/kick-bass.mp3");
+                kickBass.play(); 
+            break;
+
+            case "l":
+                var crash = new Audio("sounds/crash.mp3");
+                crash.play(); 
+            break;
+
+        //Covers all other scenarios that were not specified. Like an else in an if statement.
+        default: console.log(buttonInnerHTML); 
+
+
+        }
     });
  };
 //Whenever the button is clicked, an event occurs due to .addEventListener
