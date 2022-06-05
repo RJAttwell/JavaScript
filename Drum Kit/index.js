@@ -40,8 +40,15 @@ for(var i = 0; i<numOfDrums; i++){
 //Listens for clicks on the button.
 //When a click occurs, it calls the function 'handleClick' which will activate the code inside it
 //Do not add () to handleClick inside the addEventListener command as it will perform the function as soon as you load the page
+
+//HIGHER ORDER FUNCTIONS
 //Functions that can use other functions as inputs are called higher order functions
 //This feature is also present in Java, Python, Ruby, etc.
+
+//The function that is inserted as an input is called a CALLBACK FUNCTION.
+//Allows us to wait until something finishes happening and the function is then called back and executed
+
+
 
 
 //DETECTING KEYBOARD PRESS
@@ -51,6 +58,7 @@ document.addEventListener("keydown", function(event){
     //document.addEventListener allows entire page to listen for keyboard presses instead of a specific element (querySelector)
     
     //function(event) will show information for when the event occurs, including what key is pressed
+    //Can also use 'evt' since name of input does not matter (similar to naming variable)
 
     makeSound(event.key);
 
