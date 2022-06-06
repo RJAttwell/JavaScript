@@ -33,6 +33,8 @@ for(var i = 0; i<numOfDrums; i++){
         var buttonInnerHTML = this.innerHTML;
 
         makeSound(buttonInnerHTML);
+
+        buttonAnimation(buttonInnerHTML);
     });
 
 }
@@ -51,6 +53,8 @@ for(var i = 0; i<numOfDrums; i++){
 
 
 
+
+
 //DETECTING KEYBOARD PRESS
 //If key is pressed, the key property of the event is sent 
 
@@ -61,6 +65,7 @@ document.addEventListener("keydown", function(event){
     //Can also use 'evt' since name of input does not matter (similar to naming variable)
 
     makeSound(event.key);
+    buttonAnimation(event.key);
 
 });
 
@@ -113,3 +118,15 @@ function makeSound(key){
 
 //addEventListener has 2 inputs (.addEventListener(input1, input2))
 //input 1 specifies what event shall occur and input 2 says what should happen once that event is detected
+
+//ADDING ANIMATIONS TO WEBSITE:
+function buttonAnimation(currentKey){
+   var activeButton = document.querySelector("." + currentKey);
+   activeButton.classList.add("pressed");
+
+   //To complete the animation, we need to ensure that the buttons do not stay pressed. We can do this by adding a piece of timeout code that'll remove
+   //the pressed class after 0.1 seconds.
+   setTimeout(function(){
+    activeButton.classList.remove("pressed");
+   }, 100);
+}
